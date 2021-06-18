@@ -1,4 +1,4 @@
-﻿-- drop foreign key constraints from tables which will be dropped
+﻿-- drop foreign key constraints from tables which will be dropped -> cut all connections between remaining and dropped tables.
 Declare @sql nvarchar(MAX); 
 Select @sql = COALESCE(@sql + '; ' + query, query) 
         From 
